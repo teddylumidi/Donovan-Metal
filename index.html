@@ -10,8 +10,12 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
     <link rel="preload" as="image" href="./logo.png">
+    <link rel="preload" as="image" href="./band.png">
     
     <title>Free Scrap Metal Pickup | Donovan Metal</title>
     <meta name="description" content="Got unwanted scrap metal or broken appliances? We'll haul it away for free. Schedule your pickup today.">
@@ -65,8 +69,6 @@
         }
     </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
-        
         .page-section { display: none; }
         .page-section.active { display: block; animation: fadeIn 0.4s ease-out forwards; }
         
@@ -154,19 +156,19 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
                     <div class="bg-metal-900 p-8 sm:p-10 rounded-2xl border border-metal-700 text-center hover:border-metal-accent transition-colors shadow-lg">
-                        <img src="./refrigerators.png" alt="Refrigerators" width="300" height="300" loading="lazy" class="w-full max-w-[250px] sm:max-w-[300px] h-auto mx-auto mb-6 object-contain transform hover:scale-105 transition-transform duration-300">
+                        <img src="./refrigerators.png" alt="Refrigerators" width="300" height="300" loading="lazy" decoding="async" class="w-full max-w-[250px] sm:max-w-[300px] h-auto mx-auto mb-6 object-contain transform hover:scale-105 transition-transform duration-300">
                         <h3 class="text-2xl font-black text-white tracking-wide uppercase">Refrigerators</h3>
                     </div>
                     <div class="bg-metal-900 p-8 sm:p-10 rounded-2xl border border-metal-700 text-center hover:border-metal-accent transition-colors shadow-lg">
-                        <img src="./washers.png" alt="Washers & Dryers" width="300" height="300" loading="lazy" class="w-full max-w-[250px] sm:max-w-[300px] h-auto mx-auto mb-6 object-contain transform hover:scale-105 transition-transform duration-300">
+                        <img src="./washers.png" alt="Washers & Dryers" width="300" height="300" loading="lazy" decoding="async" class="w-full max-w-[250px] sm:max-w-[300px] h-auto mx-auto mb-6 object-contain transform hover:scale-105 transition-transform duration-300">
                         <h3 class="text-2xl font-black text-white tracking-wide uppercase">Washers & Dryers</h3>
                     </div>
                     <div class="bg-metal-900 p-8 sm:p-10 rounded-2xl border border-metal-700 text-center hover:border-metal-accent transition-colors shadow-lg">
-                        <img src="./autoparts.png" alt="Auto Parts" width="300" height="300" loading="lazy" class="w-full max-w-[250px] sm:max-w-[300px] h-auto mx-auto mb-6 object-contain transform hover:scale-105 transition-transform duration-300">
+                        <img src="./autoparts.png" alt="Auto Parts" width="300" height="300" loading="lazy" decoding="async" class="w-full max-w-[250px] sm:max-w-[300px] h-auto mx-auto mb-6 object-contain transform hover:scale-105 transition-transform duration-300">
                         <h3 class="text-2xl font-black text-white tracking-wide uppercase">Auto Parts</h3>
                     </div>
                     <div class="bg-metal-900 p-8 sm:p-10 rounded-2xl border border-metal-700 text-center hover:border-metal-accent transition-colors shadow-lg">
-                        <img src="./scrapmetals.png" alt="All Scrap Metal" width="300" height="300" loading="lazy" class="w-full max-w-[250px] sm:max-w-[300px] h-auto mx-auto mb-6 object-contain transform hover:scale-105 transition-transform duration-300">
+                        <img src="./scrapmetals.png" alt="All Scrap Metal" width="300" height="300" loading="lazy" decoding="async" class="w-full max-w-[250px] sm:max-w-[300px] h-auto mx-auto mb-6 object-contain transform hover:scale-105 transition-transform duration-300">
                         <h3 class="text-2xl font-black text-white tracking-wide uppercase">All Scrap Metal</h3>
                     </div>
                 </div>
@@ -186,7 +188,7 @@
                 <div class="flex flex-col order-2 lg:order-1">
                     <div class="w-full rounded-2xl overflow-hidden shadow-2xl border border-metal-700 bg-metal-800">
                         <!-- Image spans full width of its larger container column -->
-                        <img src="./donvan.png" alt="Donovan Team" class="w-full h-auto object-cover aspect-video sm:aspect-auto" loading="lazy">
+                        <img src="./donvan.png" alt="Donovan Team" class="w-full h-auto object-cover aspect-video sm:aspect-auto" loading="lazy" decoding="async">
                     </div>
                     
                     <div class="mt-8 bg-metal-800 p-6 sm:p-8 rounded-2xl border border-metal-700 shadow-xl">
@@ -242,33 +244,30 @@
         </section>
 
         <section id="page-about" class="page-section py-16 sm:py-24 min-h-screen relative flex items-center bg-cover bg-center" style="background-image: url('./yard.png');">
-            <div class="absolute inset-0 bg-metal-900/80"></div>
+            <div class="absolute inset-0 bg-metal-900/40"></div>
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-wider uppercase mb-6">About Us</h2>
+                    <h2 class="text-5xl sm:text-7xl lg:text-8xl text-transparent [-webkit-text-stroke:2px_#d1d5db] uppercase mb-6" style="font-family: Impact, 'Arial Black', sans-serif; letter-spacing: 0.05em;">About Us</h2>
                     <div class="w-24 h-1.5 bg-metal-accent mx-auto rounded-full"></div>
                 </div>
-                <div class="bg-metal-800 p-8 sm:p-12 lg:p-16 rounded-2xl border border-metal-700 shadow-2xl text-center md:text-left">
-                    <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 leading-relaxed mb-8">
-                        At <span class="text-white font-black uppercase tracking-wide">Donovan Metal</span>, we see raw potential. For years, we've been the go-to team for clearing out the heavy, the broken, and the rusted. Whether it's a busted refrigerator, a heap of auto parts, or an old washer taking up space, we handle removal efficiently and professionally.
+                
+                <div class="text-center mb-12">
+                    <p class="text-xl sm:text-2xl text-gray-100 leading-relaxed font-bold drop-shadow-[0_4px_4px_rgba(0,0,0,1)] max-w-3xl mx-auto">
+                        At Donovan Metal, we don't just haul scrap; we forge a cleaner community. Built on raw grit and heavy-duty dedication, we take the hardest, heaviest jobs off your hands for free. From rusted appliances to heaps of forgotten steel, if it's metal, we'll make it disappear. Fast, reliable, and tough as nails.
                     </p>
-                    <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 leading-relaxed">
-                        We offer affordable rates for all items, typically ranging between $60 and $100 per item depending on size and type. For exact pricing, simply inquire and we’ll give you a clear quote with no surprises. 
-                        We are committed to keeping our community clean, recycling responsibly, and doing the heavy lifting so you don't have to. Fast, reliable, and tough enough to handle any job—that's the Donovan way.
-                    </p>
+                </div>
 
-                    <div class="mt-10 pt-8 border-t border-metal-700">
-                        <h3 class="text-2xl font-black text-white uppercase tracking-wider mb-4">Address Details</h3>
-                        <p class="text-lg text-gray-300 leading-relaxed font-medium">
-                            4034 Ninth line road<br>
-                            Winchester, Ontario<br>
-                            Ottawa, ON, Canada K0C 2K0
-                        </p>
-                        <p class="mt-4 font-black text-2xl text-white flex items-center justify-center md:justify-start gap-3">
-                            <span class="text-metal-accent">Tel:</span> 
-                            <a href="tel:6137831949" class="hover:text-red-500 transition-colors touch-manipulation">613-783-1949</a>
-                        </p>
-                    </div>
+                <div class="text-center mt-12 drop-shadow-2xl">
+                    <h3 class="text-3xl font-black text-white uppercase tracking-wider mb-4 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">Address Details</h3>
+                    <p class="text-xl sm:text-2xl text-gray-100 leading-relaxed font-bold drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
+                        4034 Ninth line road<br>
+                        Winchester, Ontario<br>
+                        Ottawa, ON, Canada K0C 2K0
+                    </p>
+                    <p class="mt-6 font-black text-3xl sm:text-4xl text-white flex items-center justify-center gap-3 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
+                        <span class="text-metal-accent">Tel:</span> 
+                        <a href="tel:6137831949" class="hover:text-red-500 transition-colors touch-manipulation">613-783-1949</a>
+                    </p>
                 </div>
             </div>
         </section>
