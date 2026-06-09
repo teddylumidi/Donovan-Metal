@@ -3,7 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donovan Masonry Metal Recycling</title>
+    
+    <!-- SEO Title & Meta Description -->
+    <title>Free Scrap Metal Pickup & Appliance Removal | Donovan Metal</title>
+    <meta name="description" content="Free scrap metal pickup and appliance removal. We haul away old refrigerators, washers, dryers, auto parts, and all unwanted scrap metal for free.">
+    <meta name="keywords" content="scrap metal pickup, free appliance removal, metal recycling, junk metal hauling, free refrigerator pickup, Donovan Metal">
+    <meta name="author" content="Donovan Metal">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.donovanmetal.com/">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Free Scrap Metal Pickup | Donovan Metal">
+    <meta property="og:description" content="Got unwanted scrap metal or broken appliances? We'll haul it away for free. Schedule your pickup today.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.donovanmetal.com/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop">
+
+    <!-- Schema.org Markup for Local Business SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Donovan Metal",
+      "image": "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop",
+      "@id": "https://www.donovanmetal.com/",
+      "url": "https://www.donovanmetal.com/",
+      "telephone": "1-800-555-IRON",
+      "description": "Free scrap metal and appliance pickup service. We haul away refrigerators, washers, dryers, and unwanted metal for free. A division of Donovan Masonry.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Your City",
+        "addressRegion": "Your State",
+        "addressCountry": "US"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+        ],
+        "opens": "07:00",
+        "closes": "18:00"
+      }
+    }
+    </script>
     
     <!-- Google Fonts for the 'Heavy Metal' vibe and readable body text -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,11 +81,11 @@
     <style>
         /* Custom styles for the heavy metal aesthetic */
         .bg-heavy-metal {
-            /* Stock image of a heavy metal guitarist/concert */
-            background-image: linear-gradient(to bottom, rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.95)), url('https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1920&auto=format&fit=crop');
+            /* Custom uploaded band image */
+            background-image: linear-gradient(to bottom, rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.95)), url('./band.png');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
+            /* Removed background-attachment: fixed; to keep the 16:9 aspect ratio accurate and avoid extreme cropping */
         }
         
         .text-glow {
@@ -80,11 +122,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <!-- Logo area -->
-                <div class="flex-shrink-0 cursor-pointer" onclick="switchPage('home')">
-                    <h1 class="font-metal text-3xl text-white tracking-wider flex items-center gap-2">
-                        <i class="ph ph-lightning text-metal-accent"></i>
-                        Donovan <span class="text-metal-accent">Metal</span>
-                    </h1>
+                <div class="flex-shrink-0 cursor-pointer h-full flex items-center py-2" onclick="switchPage('home')">
+                    <img src="./logo.png" alt="Donovan Metal" class="max-h-16 md:max-h-20 w-auto object-contain">
                 </div>
                 <!-- Nav Links -->
                 <div class="hidden md:block">
@@ -117,20 +156,20 @@
     <main class="flex-grow pt-20">
         
         <!-- VIEW 1: HOME PAGE -->
-        <div id="page-home" class="page-section page-active w-full">
-            <!-- Hero Section with Heavy Metal Vibe -->
-            <div class="bg-heavy-metal min-h-[85vh] flex items-center justify-center relative border-b-4 border-metal-accent">
+        <section id="page-home" class="page-section page-active w-full">
+            <!-- Hero Section with Heavy Metal Vibe (16:9 Aspect Ratio) -->
+            <div class="bg-heavy-metal w-full aspect-video min-h-[650px] lg:min-h-0 flex items-center justify-center relative border-b-4 border-metal-accent py-16">
                 <div class="text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
-                    <h2 class="font-metal text-5xl md:text-7xl lg:text-8xl text-white mb-6 uppercase tracking-widest text-glow drop-shadow-2xl animate-pulse">
+                    <h1 class="font-metal text-5xl md:text-7xl lg:text-8xl text-white mb-6 uppercase tracking-widest text-glow drop-shadow-2xl animate-pulse">
                         Heavy Metal<br><span class="text-metal-accent">Recycling</span>
-                    </h2>
+                    </h1>
                     
                     <div class="bg-metal-900/80 p-6 md:p-8 rounded-xl border border-metal-700 backdrop-blur-sm shadow-2xl mb-10 transform -rotate-1 hover:rotate-0 transition-transform duration-300">
-                        <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 uppercase tracking-wide">
+                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 uppercase tracking-wide">
                             Free pick up of all metals!
-                        </h3>
+                        </h2>
                         <p class="text-lg md:text-xl text-gray-300 font-medium">
-                            Refrigerators, washing machines, dryers, and <span class="text-metal-accent font-bold">ALL unwanted scrap metal.</span>
+                            Refrigerator, washing machines dryers and all unwanted metals there.
                         </p>
                     </div>
 
@@ -149,16 +188,16 @@
             <div class="bg-metal-900 py-16">
                 <div class="max-w-4xl mx-auto px-4 text-center">
                     <p class="text-gray-400 text-sm md:text-base leading-relaxed">
-                        <strong class="text-gray-200">Donovan Masonry Metal Recycling</strong> is your dedicated scrap removal solution. 
+                        <strong class="text-gray-200">Donovan Metal</strong> is your dedicated scrap removal solution. 
                         While our name carries the trusted reputation of Donovan Masonry, this specialized division handles 
                         100% of your metal hauling needs—fast, free, and out of your way. Let us rock your scrap!
                     </p>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- VIEW 2: SERVICES / WHAT WE TAKE -->
-        <div id="page-services" class="page-section page-hidden w-full bg-metal-800 min-h-screen py-16">
+        <section id="page-services" class="page-section page-hidden w-full bg-metal-800 min-h-screen py-16">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="font-metal text-5xl text-white mb-4 tracking-wider">The <span class="text-metal-accent">Hit List</span></h2>
@@ -198,10 +237,10 @@
                     </button>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- VIEW 3: CONTACT PAGE (The "Separate Page") -->
-        <div id="page-contact" class="page-section page-hidden w-full bg-metal-900 min-h-screen py-16 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-metal-800 to-metal-900">
+        <section id="page-contact" class="page-section page-hidden w-full bg-metal-900 min-h-screen py-16 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-metal-800 to-metal-900">
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="bg-metal-800 rounded-2xl shadow-2xl border border-metal-700 overflow-hidden flex flex-col md:flex-row">
                     
@@ -293,17 +332,18 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
     <!-- Footer -->
     <footer class="bg-[#0a0a0a] border-t border-metal-800 py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:flex md:justify-between md:items-center">
-            <div class="mb-4 md:mb-0">
-                <span class="font-metal text-xl text-white tracking-wider">Donovan <span class="text-metal-accent">Metal</span></span>
+            <div class="mb-4 md:mb-0 flex justify-center md:justify-start cursor-pointer" onclick="switchPage('home')">
+                <!-- Using Logo image in footer instead of text -->
+                <img src="./logo.png" alt="Donovan Metal" class="h-10 w-auto object-contain">
             </div>
             <div class="text-sm text-gray-500">
-                &copy; <script>document.write(new Date().getFullYear())</script> Donovan Masonry Metal Recycling. All rights reserved.
+                &copy; <script>document.write(new Date().getFullYear())</script> Donovan Metal. All rights reserved.
             </div>
             <div class="mt-4 md:mt-0 text-sm text-gray-500">
                 A proud division of <a href="#" class="text-gray-300 hover:text-metal-accent transition-colors">Donovan Masonry</a>
