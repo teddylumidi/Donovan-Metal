@@ -118,7 +118,7 @@
 <body class="bg-metal-900 text-gray-200 font-sans antialiased overflow-x-hidden min-h-screen flex flex-col relative">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-metal-900/90 backdrop-blur-md border-b border-metal-700 shadow-lg">
+    <nav class="fixed w-full z-50 bg-metal-900 border-b border-metal-700 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <!-- Logo area -->
@@ -143,7 +143,7 @@
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-metal-800 border-b border-metal-700">
+        <div id="mobile-menu" class="hidden md:hidden bg-metal-900 border-b border-metal-700">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <button onclick="switchPage('home'); toggleMobileMenu()" class="block w-full text-left hover:bg-metal-700 px-3 py-2 rounded-md text-base font-medium">Home</button>
                 <button onclick="switchPage('services'); toggleMobileMenu()" class="block w-full text-left hover:bg-metal-700 px-3 py-2 rounded-md text-base font-medium">What We Take</button>
@@ -207,25 +207,25 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- Item 1 -->
                     <div class="bg-metal-900 p-8 rounded-xl border border-metal-700 text-center hover:border-metal-accent transition-colors group">
-                        <i class="ph-fill ph-thermometer-cold text-6xl text-gray-500 group-hover:text-metal-accent mb-4 transition-colors"></i>
+                        <img src="./refrigerators.png" alt="Refrigerators" class="h-20 w-auto mx-auto mb-4 object-contain group-hover:scale-110 transition-transform duration-300">
                         <h3 class="text-xl font-bold text-white mb-2">Refrigerators</h3>
                         <p class="text-sm text-gray-400">Old, broken, or taking up space. We handle the heavy lifting.</p>
                     </div>
                     <!-- Item 2 -->
                     <div class="bg-metal-900 p-8 rounded-xl border border-metal-700 text-center hover:border-metal-accent transition-colors group">
-                        <i class="ph-fill ph-waves text-6xl text-gray-500 group-hover:text-metal-accent mb-4 transition-colors"></i>
+                        <img src="./washers.png" alt="Washers & Dryers" class="h-20 w-auto mx-auto mb-4 object-contain group-hover:scale-110 transition-transform duration-300">
                         <h3 class="text-xl font-bold text-white mb-2">Washers & Dryers</h3>
                         <p class="text-sm text-gray-400">Laundry room upgrades? We take the old units away completely free.</p>
                     </div>
                     <!-- Item 3 -->
                     <div class="bg-metal-900 p-8 rounded-xl border border-metal-700 text-center hover:border-metal-accent transition-colors group">
-                        <i class="ph-fill ph-car text-6xl text-gray-500 group-hover:text-metal-accent mb-4 transition-colors"></i>
+                        <img src="./autoparts.png" alt="Auto Parts" class="h-20 w-auto mx-auto mb-4 object-contain group-hover:scale-110 transition-transform duration-300">
                         <h3 class="text-xl font-bold text-white mb-2">Auto Parts</h3>
                         <p class="text-sm text-gray-400">Engines, rims, rotors, frames. If it's automotive metal, we want it.</p>
                     </div>
                     <!-- Item 4 -->
                     <div class="bg-metal-900 p-8 rounded-xl border border-metal-700 text-center hover:border-metal-accent transition-colors group">
-                        <i class="ph-fill ph-barbell text-6xl text-gray-500 group-hover:text-metal-accent mb-4 transition-colors"></i>
+                        <img src="./scrapmetals.png" alt="All Scrap Metal" class="h-20 w-auto mx-auto mb-4 object-contain group-hover:scale-110 transition-transform duration-300">
                         <h3 class="text-xl font-bold text-white mb-2">All Scrap Metal</h3>
                         <p class="text-sm text-gray-400">Pipes, fencing, grills, tools. If it clinks, we'll pick it up.</p>
                     </div>
