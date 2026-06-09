@@ -115,8 +115,9 @@
         <div id="mobile-menu" class="hidden md:hidden bg-metal-900 border-b border-metal-700">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <button onclick="switchPage('home'); toggleMobileMenu()" class="block w-full text-left hover:bg-metal-700 px-3 py-2 rounded-md text-base font-medium touch-manipulation">Home</button>
-                <button onclick="switchPage('services'); toggleMobileMenu()" class="block w-full text-left hover:bg-metal-700 px-3 py-2 rounded-md text-base font-medium touch-manipulation">What We Take</button>
-                <button onclick="switchPage('contact'); toggleMobileMenu()" class="block w-full text-left text-metal-accent hover:bg-metal-700 px-3 py-2 rounded-md text-base font-bold touch-manipulation">Schedule Pickup</button>
+                <button onclick="switchPage('services'); toggleMobileMenu()" class="block w-full text-left hover:bg-metal-700 px-3 py-2 rounded-md text-base font-medium touch-manipulation">Services</button>
+                <button onclick="switchPage('contact'); toggleMobileMenu()" class="block w-full text-left text-metal-accent hover:bg-metal-700 px-3 py-2 rounded-md text-base font-bold touch-manipulation">Schedule</button>
+                <button onclick="switchPage('about'); toggleMobileMenu()" class="block w-full text-left hover:bg-metal-700 px-3 py-2 rounded-md text-base font-medium touch-manipulation">About</button>
             </div>
         </div>
     </nav>
@@ -214,10 +215,28 @@
                             <label for="items" class="block text-sm font-medium text-gray-400 mb-1">What needs to be picked up?</label>
                             <textarea id="items" name="items" rows="4" required class="w-full bg-metal-900 border border-metal-700 rounded-md py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-metal-accent focus:border-transparent transition-colors"></textarea>
                         </div>
+                        <button type="submit" class="w-full bg-metal-accent text-white hover:bg-red-700 px-8 py-4 rounded-md text-lg font-black uppercase tracking-wider transition-all shadow-lg touch-manipulation">
+                            Send Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
         <section id="page-about" class="page-section py-20 bg-metal-900 min-h-screen">
-            <div class="max-w-3xl mx-auto px-4 text-center">
-                <h2 class="text-3xl md:text-5xl font-black text-white uppercase mb-8">About Us</h2>
-                <p class="text-gray-400">Information about our services and team will be updated here shortly.</p>
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-5xl font-black text-white tracking-wider uppercase mb-4">About Us</h2>
+                    <div class="w-24 h-1 bg-metal-accent mx-auto mb-8"></div>
+                </div>
+                <div class="bg-metal-800 p-8 md:p-12 rounded-xl border border-metal-700 shadow-2xl text-center">
+                    <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
+                        At <span class="text-white font-bold">Donovan Metal</span>, we don't just see junk—we see raw potential. For years, we've been the go-to crew for clearing out the heavy, the broken, and the rusted. Whether it's a busted refrigerator, a heap of auto parts, or an old washer taking up space, we haul it away for completely free.
+                    </p>
+                    <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
+                        We are committed to keeping our community clean, recycling responsibly, and doing the heavy lifting so you don't have to. Fast, reliable, and tough enough to handle any job—that's the Donovan way.
+                    </p>
+                </div>
             </div>
         </section>
     </main>
