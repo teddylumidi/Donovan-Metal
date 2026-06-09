@@ -29,20 +29,15 @@
       "image": "https://www.donovanmetal.com/band.png",
       "@id": "https://www.donovanmetal.com/",
       "url": "https://www.donovanmetal.com/",
-      "telephone": "+15551234567",
+      "telephone": "+16137831949",
       "priceRange": "$0",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "123 Metal Way",
-        "addressLocality": "Your City",
-        "addressRegion": "Your State",
-        "postalCode": "12345",
-        "addressCountry": "US"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 40.7128,
-        "longitude": -74.0060
+        "streetAddress": "4034 Ninth line road",
+        "addressLocality": "Winchester",
+        "addressRegion": "Ontario",
+        "postalCode": "K0C 2K0",
+        "addressCountry": "CA"
       },
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
@@ -158,22 +153,22 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
                     <div class="bg-metal-900 p-8 rounded-xl border border-metal-700 text-center hover:border-metal-accent transition-colors group">
-                        <img src="./refrigerators.png" alt="Refrigerators" width="300" height="300" loading="lazy" class="w-full h-48 object-contain mb-6 group-hover:scale-105 transition-transform duration-300">
+                        <img src="./refrigerators.png" alt="Refrigerators" width="300" height="300" loading="lazy" class="w-full h-80 object-contain mb-6 group-hover:scale-105 transition-transform duration-300">
                         <h3 class="text-xl font-bold text-white mb-2">Refrigerators</h3>
                         <p class="text-sm text-gray-400">Old, broken, or taking up space. We handle the heavy lifting.</p>
                     </div>
                     <div class="bg-metal-900 p-8 rounded-xl border border-metal-700 text-center hover:border-metal-accent transition-colors group">
-                        <img src="./washers.png" alt="Washers & Dryers" width="300" height="300" loading="lazy" class="w-full h-48 object-contain mb-6 group-hover:scale-105 transition-transform duration-300">
+                        <img src="./washers.png" alt="Washers & Dryers" width="300" height="300" loading="lazy" class="w-full h-80 object-contain mb-6 group-hover:scale-105 transition-transform duration-300">
                         <h3 class="text-xl font-bold text-white mb-2">Washers & Dryers</h3>
                         <p class="text-sm text-gray-400">Laundry room upgrades? We take the old units away completely free.</p>
                     </div>
                     <div class="bg-metal-900 p-8 rounded-xl border border-metal-700 text-center hover:border-metal-accent transition-colors group">
-                        <img src="./autoparts.png" alt="Auto Parts" width="300" height="300" loading="lazy" class="w-full h-48 object-contain mb-6 group-hover:scale-105 transition-transform duration-300">
+                        <img src="./autoparts.png" alt="Auto Parts" width="300" height="300" loading="lazy" class="w-full h-80 object-contain mb-6 group-hover:scale-105 transition-transform duration-300">
                         <h3 class="text-xl font-bold text-white mb-2">Auto Parts</h3>
                         <p class="text-sm text-gray-400">Engines, rims, rotors, frames. If it's automotive metal, we want it.</p>
                     </div>
                     <div class="bg-metal-900 p-8 rounded-xl border border-metal-700 text-center hover:border-metal-accent transition-colors group">
-                        <img src="./scrapmetals.png" alt="All Scrap Metal" width="300" height="300" loading="lazy" class="w-full h-48 object-contain mb-6 group-hover:scale-105 transition-transform duration-300">
+                        <img src="./scrapmetals.png" alt="All Scrap Metal" width="300" height="300" loading="lazy" class="w-full h-80 object-contain mb-6 group-hover:scale-105 transition-transform duration-300">
                         <h3 class="text-xl font-bold text-white mb-2">All Scrap Metal</h3>
                         <p class="text-sm text-gray-400">Pipes, fencing, grills, tools. If it clinks, we'll pick it up.</p>
                     </div>
@@ -197,6 +192,11 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                     <div class="bg-metal-800 p-4 rounded-xl border border-metal-700 shadow-2xl">
                         <img src="./donvan.png" alt="Donovan Team" class="w-full h-full object-cover rounded-lg">
+                        <div class="mt-6 text-gray-400 space-y-2">
+                            <p class="font-medium text-gray-200">Address Details</p>
+                            <p>4034 Ninth line road<br>Winchester, Ontario<br>Canada K0C 2K0</p>
+                            <p class="font-bold text-metal-accent">Tel: 613-783-1949</p>
+                        </div>
                     </div>
                     
                     <div class="bg-metal-800 p-8 rounded-xl border border-metal-700 shadow-2xl">
@@ -229,13 +229,6 @@
                         </form>
                     </div>
                 </div>
-
-                <div class="mt-12 text-center">
-                    <p class="text-gray-400 mb-2">Or call us directly at:</p>
-                    <a href="tel:+15551234567" class="text-3xl font-black text-metal-accent hover:text-red-500 transition-colors">
-                        (555) 123-4567
-                    </a>
-                </div>
             </div>
         </section>
     </main>
@@ -249,8 +242,6 @@
     </footer>
 
     <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             const btn = document.getElementById('mobile-menu-btn');
