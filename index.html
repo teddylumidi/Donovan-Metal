@@ -3,17 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     
+    <!-- SEO & Social Meta Tags -->
+    <title>Donovans Heavy Metal Recycling | Free Scrap Metal Pickup</title>
+    <meta name="description" content="Free scrap metal pickup in Ontario. We haul refrigerators, washers, dryers, and all unwanted metal. Fast, reliable service.">
+    <meta property="og:title" content="Donovans Heavy Metal Recycling">
+    <meta property="og:description" content="Free scrap metal pickup in Ontario. You stack it, we scrap it.">
+    <meta property="og:type" content="website">
+    
+    <!-- Security Headers (Meta-Simulation) -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
     <link rel="preload" as="image" href="./logo.png">
     <link rel="preload" as="image" href="./band.png">
-    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     
-    <title>Donovans Heavy Metal Recycling</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -50,16 +57,16 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20">
                 <div class="flex items-center">
-                    <img src="./logo.png" alt="Logo" class="h-10 sm:h-12 w-auto cursor-pointer hover:scale-105 transition-transform" onclick="switchPage('page-home')">
+                    <img src="./logo.png" alt="Donovan Metal Logo" class="h-10 sm:h-12 w-auto cursor-pointer hover:scale-105 transition-transform" onclick="switchPage('page-home')">
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <button onclick="switchPage('page-home')" class="text-gray-300 hover:text-white font-bold uppercase tracking-wide text-sm">HOME</button>
-                    <button onclick="switchPage('page-services')" class="text-gray-300 hover:text-white font-bold uppercase tracking-wide text-sm">SERVICES</button>
-                    <button onclick="switchPage('page-schedule')" class="text-gray-300 hover:text-white font-bold uppercase tracking-wide text-sm">SCHEDULE</button>
-                    <button onclick="switchPage('page-about')" class="text-gray-300 hover:text-white font-bold uppercase tracking-wide text-sm">ABOUT</button>
+                    <button onclick="switchPage('page-home')" class="text-gray-300 hover:text-white font-bold uppercase tracking-wide text-sm transition-colors">HOME</button>
+                    <button onclick="switchPage('page-services')" class="text-gray-300 hover:text-white font-bold uppercase tracking-wide text-sm transition-colors">SERVICES</button>
+                    <button onclick="switchPage('page-schedule')" class="text-gray-300 hover:text-white font-bold uppercase tracking-wide text-sm transition-colors">SCHEDULE</button>
+                    <button onclick="switchPage('page-about')" class="text-gray-300 hover:text-white font-bold uppercase tracking-wide text-sm transition-colors">ABOUT</button>
                 </div>
                 <div class="flex items-center md:hidden">
-                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white p-2">
+                    <button id="mobile-menu-btn" aria-label="Toggle Navigation" class="text-gray-300 hover:text-white p-2">
                         <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="3" d="M4 6h16M4 12h16M4 18h16"/></svg>
                     </button>
                 </div>
@@ -76,16 +83,18 @@
     </nav>
 
     <main class="flex-grow pt-20">
+        <!-- Home -->
         <section id="page-home" class="page-section active h-[calc(100vh-5rem)]">
             <div class="h-full bg-heavy-metal flex items-center justify-center text-center px-4">
                 <div class="max-w-4xl mx-auto">
                     <h1 class="text-4xl sm:text-7xl lg:text-8xl font-black text-white tracking-tighter uppercase mb-6 drop-shadow-2xl">Heavy Metal<br><span class="text-metal-accent">Recycling</span></h1>
                     <p class="text-lg sm:text-2xl font-bold text-gray-200 mb-10 max-w-2xl mx-auto">Free pick up of all metals. Refrigerator, washing machines dryers and all unwanted metals.</p>
-                    <button onclick="switchPage('page-schedule')" class="bg-metal-accent hover:bg-red-600 text-white text-lg sm:text-xl font-black py-4 px-10 rounded uppercase shadow-xl">Summon Us</button>
+                    <button onclick="switchPage('page-schedule')" class="bg-metal-accent hover:bg-red-700 transition-colors text-white text-lg sm:text-xl font-black py-4 px-10 rounded uppercase shadow-xl">Summon Us</button>
                 </div>
             </div>
         </section>
 
+        <!-- Services -->
         <section id="page-services" class="page-section py-16 bg-metal-900">
             <div class="max-w-7xl mx-auto px-4">
                 <div class="text-center mb-12"><h2 class="text-4xl md:text-6xl font-black text-white uppercase">The Hit List</h2></div>
@@ -98,6 +107,7 @@
             </div>
         </section>
 
+        <!-- Schedule -->
         <section id="page-schedule" class="page-section py-16 bg-metal-900">
             <div class="max-w-6xl mx-auto px-4">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -111,9 +121,7 @@
                         </div>
                     </div>
                     <div class="bg-metal-800 p-6 sm:p-10 rounded-2xl border border-metal-700">
-                        <form action="https://formsubmit.co/don@donovansheavymetalrecycling.ca" method="POST" class="space-y-4">
-                            <input type="hidden" name="_captcha" value="false">
-                            <input type="hidden" name="_subject" value="New Pickup Request!">
+                        <form action="https://formspree.io/f/xqeodzpq" method="POST" class="space-y-4">
                             <input type="text" name="name" placeholder="Name" class="w-full bg-metal-900 border border-metal-700 rounded p-4 text-white" required>
                             <input type="tel" name="phone" placeholder="Phone" class="w-full bg-metal-900 border border-metal-700 rounded p-4 text-white" required>
                             <input type="text" name="address" placeholder="Address" class="w-full bg-metal-900 border border-metal-700 rounded p-4 text-white" required>
@@ -125,6 +133,7 @@
             </div>
         </section>
 
+        <!-- About -->
         <section id="page-about" class="page-section bg-yard py-20 min-h-screen flex items-center justify-center">
             <div class="max-w-3xl mx-auto px-4 text-center">
                 <h2 class="text-5xl font-black uppercase mb-6 metal-text">About Us</h2>
@@ -135,12 +144,12 @@
 
     <footer class="bg-metal-900 border-t border-metal-800 py-8">
         <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
-            <img src="./logo.png" alt="Logo" class="h-12 w-auto">
+            <img src="./logo.png" alt="Donovan Metal Logo" class="h-12 w-auto">
             <div class="flex flex-wrap justify-center gap-6">
-                <button onclick="switchPage('page-home')" class="text-gray-400 hover:text-white font-bold uppercase text-xs">HOME</button>
-                <button onclick="switchPage('page-services')" class="text-gray-400 hover:text-white font-bold uppercase text-xs">SERVICES</button>
-                <button onclick="switchPage('page-schedule')" class="text-gray-400 hover:text-white font-bold uppercase text-xs">SCHEDULE</button>
-                <button onclick="switchPage('page-about')" class="text-gray-400 hover:text-white font-bold uppercase text-xs">ABOUT</button>
+                <button onclick="switchPage('page-home')" class="text-gray-400 hover:text-white font-bold uppercase text-xs transition-colors">HOME</button>
+                <button onclick="switchPage('page-services')" class="text-gray-400 hover:text-white font-bold uppercase text-xs transition-colors">SERVICES</button>
+                <button onclick="switchPage('page-schedule')" class="text-gray-400 hover:text-white font-bold uppercase text-xs transition-colors">SCHEDULE</button>
+                <button onclick="switchPage('page-about')" class="text-gray-400 hover:text-white font-bold uppercase text-xs transition-colors">ABOUT</button>
             </div>
         </div>
     </footer>
