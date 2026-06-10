@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     
-    <!-- Preconnect to external services -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Preload Critical Assets for Speed -->
     <link rel="preload" as="image" href="./logo.png">
     <link rel="preload" as="image" href="./band.png">
     
@@ -52,14 +50,13 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20">
                 <div class="flex items-center">
-                    <img src="./logo.png" alt="Donovans Heavy Metal Recycling Logo" class="h-12 sm:h-14 w-auto cursor-pointer hover:scale-105 transition-transform" onclick="switchPage('page-home')">
+                    <img src="./logo.png" alt="Logo" class="h-10 sm:h-12 w-auto cursor-pointer hover:scale-105 transition-transform" onclick="switchPage('page-home')">
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <button onclick="switchPage('page-home')" class="text-gray-300 hover:text-white font-bold transition-colors uppercase tracking-wide text-sm">HOME</button>
-                    <button onclick="switchPage('page-services')" class="text-gray-300 hover:text-white font-bold transition-colors uppercase tracking-wide text-sm">SERVICES</button>
-                    <button onclick="switchPage('page-schedule')" class="text-gray-300 hover:text-white font-bold transition-colors uppercase tracking-wide text-sm">SCHEDULE</button>
-                    <button onclick="switchPage('page-about')" class="text-gray-300 hover:text-white font-bold transition-colors uppercase tracking-wide text-sm">ABOUT</button>
-                    <button onclick="switchPage('page-schedule')" class="bg-metal-accent hover:bg-red-600 text-white px-6 py-2.5 rounded font-bold transition-colors uppercase tracking-wide text-sm shadow-lg">Request Pickup</button>
+                    <button onclick="switchPage('page-home')" class="text-gray-300 hover:text-white font-bold uppercase tracking-wide text-sm">HOME</button>
+                    <button onclick="switchPage('page-services')" class="text-gray-300 hover:text-white font-bold uppercase tracking-wide text-sm">SERVICES</button>
+                    <button onclick="switchPage('page-schedule')" class="text-gray-300 hover:text-white font-bold uppercase tracking-wide text-sm">SCHEDULE</button>
+                    <button onclick="switchPage('page-about')" class="text-gray-300 hover:text-white font-bold uppercase tracking-wide text-sm">ABOUT</button>
                 </div>
                 <div class="flex items-center md:hidden">
                     <button id="mobile-menu-btn" class="text-gray-300 hover:text-white p-2">
@@ -70,10 +67,10 @@
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-metal-800 border-b border-metal-700">
             <div class="px-4 pt-2 pb-6 space-y-2">
-                <button onclick="switchPage('page-home')" class="block w-full text-left px-3 py-3 text-base font-bold text-gray-300 hover:text-white hover:bg-metal-700 rounded-md uppercase">HOME</button>
-                <button onclick="switchPage('page-services')" class="block w-full text-left px-3 py-3 text-base font-bold text-gray-300 hover:text-white hover:bg-metal-700 rounded-md uppercase">SERVICES</button>
-                <button onclick="switchPage('page-schedule')" class="block w-full text-left px-3 py-3 text-base font-bold text-gray-300 hover:text-white hover:bg-metal-700 rounded-md uppercase">SCHEDULE</button>
-                <button onclick="switchPage('page-about')" class="block w-full text-left px-3 py-3 text-base font-bold text-gray-300 hover:text-white hover:bg-metal-700 rounded-md uppercase">ABOUT</button>
+                <button onclick="switchPage('page-home')" class="block w-full text-left px-3 py-3 font-bold text-gray-300 hover:text-white uppercase">HOME</button>
+                <button onclick="switchPage('page-services')" class="block w-full text-left px-3 py-3 font-bold text-gray-300 hover:text-white uppercase">SERVICES</button>
+                <button onclick="switchPage('page-schedule')" class="block w-full text-left px-3 py-3 font-bold text-gray-300 hover:text-white uppercase">SCHEDULE</button>
+                <button onclick="switchPage('page-about')" class="block w-full text-left px-3 py-3 font-bold text-gray-300 hover:text-white uppercase">ABOUT</button>
             </div>
         </div>
     </nav>
@@ -82,69 +79,70 @@
         <section id="page-home" class="page-section active h-[calc(100vh-5rem)]">
             <div class="h-full bg-heavy-metal flex items-center justify-center text-center px-4">
                 <div class="max-w-4xl mx-auto">
-                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tighter leading-tight mb-6 drop-shadow-2xl uppercase">Heavy Metal<br><span class="text-metal-accent">Recycling</span></h1>
-                    <p class="text-xl md:text-3xl font-bold text-gray-200 mb-10 max-w-2xl mx-auto drop-shadow-lg leading-snug">Free pick up of all metals. Refrigerator, washing machines dryers and all unwanted metals.</p>
-                    <button onclick="switchPage('page-schedule')" class="bg-metal-accent hover:bg-red-600 text-white text-xl font-black py-4 px-10 rounded uppercase transition-transform hover:scale-105 shadow-xl">Summon Us</button>
+                    <h1 class="text-4xl sm:text-7xl lg:text-8xl font-black text-white tracking-tighter uppercase mb-6 drop-shadow-2xl">Heavy Metal<br><span class="text-metal-accent">Recycling</span></h1>
+                    <p class="text-lg sm:text-2xl font-bold text-gray-200 mb-10 max-w-2xl mx-auto">Free pick up of all metals. Refrigerator, washing machines dryers and all unwanted metals.</p>
+                    <button onclick="switchPage('page-schedule')" class="bg-metal-accent hover:bg-red-600 text-white text-lg sm:text-xl font-black py-4 px-10 rounded uppercase shadow-xl">Summon Us</button>
                 </div>
             </div>
         </section>
 
-        <section id="page-services" class="page-section py-20 bg-metal-900">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16"><h2 class="text-4xl md:text-6xl font-black text-white tracking-tighter uppercase mb-4">The Hit List</h2><div class="h-1.5 w-24 bg-metal-accent mx-auto"></div></div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                    <div class="bg-metal-800 p-8 rounded-2xl border border-metal-700 text-center hover:border-metal-accent transition-colors"><img src="./refrigerators.png" alt="Refrigerators" loading="lazy" decoding="async" class="w-full max-w-[250px] h-auto mx-auto mb-6 object-contain"><h3 class="text-2xl font-black text-white uppercase">Refrigerators</h3></div>
-                    <div class="bg-metal-800 p-8 rounded-2xl border border-metal-700 text-center hover:border-metal-accent transition-colors"><img src="./washers.png" alt="Washers & Dryers" loading="lazy" decoding="async" class="w-full max-w-[250px] h-auto mx-auto mb-6 object-contain"><h3 class="text-2xl font-black text-white uppercase">Washers & Dryers</h3></div>
-                    <div class="bg-metal-800 p-8 rounded-2xl border border-metal-700 text-center hover:border-metal-accent transition-colors"><img src="./autoparts.png" alt="Auto Parts" loading="lazy" decoding="async" class="w-full max-w-[250px] h-auto mx-auto mb-6 object-contain"><h3 class="text-2xl font-black text-white uppercase">Auto Parts</h3></div>
-                    <div class="bg-metal-800 p-8 rounded-2xl border border-metal-700 text-center hover:border-metal-accent transition-colors"><img src="./scrapmetals.png" alt="All Scrap Metal" loading="lazy" decoding="async" class="w-full max-w-[250px] h-auto mx-auto mb-6 object-contain"><h3 class="text-2xl font-black text-white uppercase">All Scrap Metal</h3></div>
+        <section id="page-services" class="page-section py-16 bg-metal-900">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center mb-12"><h2 class="text-4xl md:text-6xl font-black text-white uppercase">The Hit List</h2></div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-metal-800 p-6 rounded-xl border border-metal-700 text-center"><img src="./refrigerators.png" alt="Refrigerators" loading="lazy" class="h-32 mx-auto mb-4 object-contain"><h3 class="font-black text-white uppercase">Refrigerators</h3></div>
+                    <div class="bg-metal-800 p-6 rounded-xl border border-metal-700 text-center"><img src="./washers.png" alt="Washers & Dryers" loading="lazy" class="h-32 mx-auto mb-4 object-contain"><h3 class="font-black text-white uppercase">Washers & Dryers</h3></div>
+                    <div class="bg-metal-800 p-6 rounded-xl border border-metal-700 text-center"><img src="./autoparts.png" alt="Auto Parts" loading="lazy" class="h-32 mx-auto mb-4 object-contain"><h3 class="font-black text-white uppercase">Auto Parts</h3></div>
+                    <div class="bg-metal-800 p-6 rounded-xl border border-metal-700 text-center"><img src="./scrapmetals.png" alt="All Scrap Metal" loading="lazy" class="h-32 mx-auto mb-4 object-contain"><h3 class="font-black text-white uppercase">All Scrap Metal</h3></div>
                 </div>
             </div>
         </section>
 
-        <section id="page-schedule" class="page-section py-20 bg-metal-900">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16"><h2 class="text-4xl md:text-6xl font-black text-white uppercase mb-4">Summon Us</h2></div>
+        <section id="page-schedule" class="page-section py-16 bg-metal-900">
+            <div class="max-w-6xl mx-auto px-4">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     <div class="flex flex-col">
-                        <img src="./donvan.png" alt="Donovan Team" loading="lazy" decoding="async" class="w-full rounded-2xl border border-metal-700 shadow-2xl">
-                        <div class="mt-8 bg-metal-800 p-8 rounded-2xl border border-metal-700 text-center lg:text-left">
-                            <h4 class="text-xl font-bold text-white mb-2 uppercase">Location</h4>
-                            <p class="text-gray-400 mb-4">4034 Ninth line road, Winchester, Ontario, Ottawa, ON, Canada K0C 2K0</p>
-                            <h4 class="text-xl font-bold text-white mb-2 uppercase">Contact</h4>
-                            <p class="text-metal-accent font-bold text-xl"><a href="tel:6137831949">Tel: 613-783-1949</a></p>
-                            <p class="text-metal-accent font-bold text-lg break-words"><a href="mailto:don@donovansheavymetalrecycling.ca">Email: don@donovansheavymetalrecycling.ca</a></p>
+                        <img src="./donvan.png" alt="Donovan Team" loading="lazy" class="w-full rounded-2xl border border-metal-700">
+                        <div class="mt-8 bg-metal-800 p-6 rounded-2xl border border-metal-700">
+                            <h4 class="font-bold text-white uppercase mb-2">Contact</h4>
+                            <p class="text-gray-400 text-sm mb-4">4034 Ninth line road, Winchester, Ontario</p>
+                            <p class="text-metal-accent font-bold"><a href="tel:6137831949">613-783-1949</a></p>
+                            <p class="text-metal-accent font-bold break-all"><a href="mailto:don@donovansheavymetalrecycling.ca">don@donovansheavymetalrecycling.ca</a></p>
                         </div>
                     </div>
-                    <div class="bg-metal-800 p-10 rounded-2xl border border-metal-700 shadow-2xl">
-                        <form action="https://formsubmit.co/don@donovansheavymetalrecycling.ca" method="POST" class="space-y-6">
+                    <div class="bg-metal-800 p-6 sm:p-10 rounded-2xl border border-metal-700">
+                        <form action="https://formsubmit.co/don@donovansheavymetalrecycling.ca" method="POST" class="space-y-4">
                             <input type="hidden" name="_captcha" value="false">
-                            <input type="hidden" name="_subject" value="New Heavy Metal Pickup Request!">
-                            <div><label class="block text-sm font-bold text-gray-300 uppercase">Your Name</label><input type="text" name="name" class="w-full bg-metal-900 border border-metal-700 rounded p-4 text-white" required></div>
-                            <div><label class="block text-sm font-bold text-gray-300 uppercase">Phone Number</label><input type="tel" name="phone" class="w-full bg-metal-900 border border-metal-700 rounded p-4 text-white" required></div>
-                            <div><label class="block text-sm font-bold text-gray-300 uppercase">Pickup Address</label><input type="text" name="address" class="w-full bg-metal-900 border border-metal-700 rounded p-4 text-white" required></div>
-                            <div><label class="block text-sm font-bold text-gray-300 uppercase">What are we picking up?</label><textarea name="items" rows="4" class="w-full bg-metal-900 border border-metal-700 rounded p-4 text-white" required></textarea></div>
-                            <button type="submit" class="w-full bg-metal-accent hover:bg-red-600 text-white text-xl font-black py-5 rounded uppercase shadow-lg">Send Request</button>
+                            <input type="hidden" name="_subject" value="New Pickup Request!">
+                            <input type="text" name="name" placeholder="Name" class="w-full bg-metal-900 border border-metal-700 rounded p-4 text-white" required>
+                            <input type="tel" name="phone" placeholder="Phone" class="w-full bg-metal-900 border border-metal-700 rounded p-4 text-white" required>
+                            <input type="text" name="address" placeholder="Address" class="w-full bg-metal-900 border border-metal-700 rounded p-4 text-white" required>
+                            <textarea name="items" placeholder="Items" rows="3" class="w-full bg-metal-900 border border-metal-700 rounded p-4 text-white" required></textarea>
+                            <button type="submit" class="w-full bg-metal-accent hover:bg-red-600 text-white font-black py-4 rounded uppercase">Send Request</button>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="page-about" class="page-section bg-yard py-32 min-h-screen flex items-center justify-center">
-            <div class="max-w-4xl mx-auto px-4 text-center">
-                <h2 class="text-6xl md:text-8xl font-black uppercase mb-8 metal-text tracking-wider">About Us</h2>
-                <p class="text-xl md:text-2xl text-white font-bold leading-relaxed mb-8 heavy-shadow">Forged in the heart of Ontario, Donovans Heavy Metal Recycling isn't just a scrapyard; we are the end of the line for your unwanted iron, steel, and appliances. We offer lightning-fast, free pickups to clear your space, recycling materials back into the grid with industrial efficiency. No job is too rusty, no haul is too heavy. You stack it, we scrap it.</p>
-                <div class="mt-12 text-center heavy-shadow">
-                    <p class="text-white font-bold text-xl mb-2">4034 Ninth line road, Winchester, Ontario, Ottawa, ON, Canada K0C 2K0</p>
-                    <p class="text-metal-accent font-black text-2xl"><a href="tel:6137831949">Tel: 613-783-1949</a></p>
-                    <p class="text-metal-accent font-bold text-xl"><a href="mailto:don@donovansheavymetalrecycling.ca">don@donovansheavymetalrecycling.ca</a></p>
-                </div>
+        <section id="page-about" class="page-section bg-yard py-20 min-h-screen flex items-center justify-center">
+            <div class="max-w-3xl mx-auto px-4 text-center">
+                <h2 class="text-5xl font-black uppercase mb-6 metal-text">About Us</h2>
+                <p class="text-lg text-white font-bold leading-relaxed mb-6 heavy-shadow">Forged in Ontario, Donovans Heavy Metal Recycling offers lightning-fast, free pickups. No job is too rusty, no haul is too heavy. You stack it, we scrap it.</p>
             </div>
         </section>
     </main>
 
-    <footer class="bg-metal-900 border-t border-metal-800 py-12 text-center">
-        <div class="max-w-7xl mx-auto px-4"><img src="./logo.png" alt="Logo" class="h-16 mx-auto mb-4 opacity-50 hover:opacity-100 transition-opacity"></div>
+    <footer class="bg-metal-900 border-t border-metal-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
+            <img src="./logo.png" alt="Logo" class="h-12 w-auto">
+            <div class="flex flex-wrap justify-center gap-6">
+                <button onclick="switchPage('page-home')" class="text-gray-400 hover:text-white font-bold uppercase text-xs">HOME</button>
+                <button onclick="switchPage('page-services')" class="text-gray-400 hover:text-white font-bold uppercase text-xs">SERVICES</button>
+                <button onclick="switchPage('page-schedule')" class="text-gray-400 hover:text-white font-bold uppercase text-xs">SCHEDULE</button>
+                <button onclick="switchPage('page-about')" class="text-gray-400 hover:text-white font-bold uppercase text-xs">ABOUT</button>
+            </div>
+        </div>
     </footer>
 
     <script>
