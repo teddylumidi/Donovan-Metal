@@ -314,14 +314,20 @@
             btn.disabled = true;
             btn.classList.add('opacity-50', 'cursor-not-allowed');
 
-            const data = new FormData(form);
-            data.append('access_key', '7e9709af-3c53-4ab6-8576-abc28e61a8e4');
-            data.append('subject', 'Pickup Request from ' + form.querySelector('#name').value.trim());
-            data.append('from_name', 'Donovan\'s Heavy Metal Recycling Website');
+            const payload = {
+                access_key: '7e9709af-3c53-4ab6-8576-abc28e61a8e4',
+                subject: 'Pickup Request from ' + form.querySelector('#name').value.trim(),
+                from_name: "Donovan's Heavy Metal Recycling Website",
+                name: form.querySelector('#name').value.trim(),
+                phone: form.querySelector('#phone').value.trim(),
+                address: form.querySelector('#address').value.trim(),
+                items: form.querySelector('#items').value.trim()
+            };
 
             fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
-                body: data
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify(payload)
             })
             .then(res => res.json())
             .then(json => {
