@@ -330,11 +330,11 @@
                     form.reset();
                     setTimeout(() => successMsg.classList.add('hidden'), 5000);
                 } else {
-                    alert('Something went wrong. Please call us directly at 613-783-1949.');
+                    alert('Error: ' + (json.message || 'Unknown error. Please call us at 613-783-1949.'));
                 }
             })
-            .catch(() => {
-                alert('Could not send request. Please call us directly at 613-783-1949.');
+            .catch(err => {
+                alert('Could not send request: ' + err.message + '. Please call us directly at 613-783-1949.');
             })
             .finally(() => {
                 btn.innerHTML = originalText;
