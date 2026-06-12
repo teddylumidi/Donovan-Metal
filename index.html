@@ -201,7 +201,11 @@
                     <div id="form-success" class="hidden bg-green-900/50 border border-green-500 text-green-200 p-5 rounded-lg mb-8 text-center sm:text-left shadow-inner">
                         <strong class="block sm:inline text-lg mb-1 sm:mb-0">Request Received!</strong> We'll contact you shortly to confirm timing.
                     </div>
-                    <form id="pickup-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                    <form id="pickup-form" action="https://api.web3forms.com/submit" method="POST" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                        <input type="hidden" name="access_key" value="7e9709af-3c53-4ab6-8576-abc28e61a8e4">
+                        <input type="hidden" name="subject" value="New Pickup Request - Donovan's Heavy Metal Recycling">
+                        <input type="hidden" name="from_name" value="Donovan's Heavy Metal Recycling Website">
+                        <input type="checkbox" name="botcheck" style="display:none">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div>
                                 <label for="name" class="block text-sm font-bold tracking-wide text-gray-400 uppercase mb-2">Name</label>
@@ -314,20 +318,11 @@
             btn.disabled = true;
             btn.classList.add('opacity-50', 'cursor-not-allowed');
 
-            const payload = {
-                access_key: '7e9709af-3c53-4ab6-8576-abc28e61a8e4',
-                subject: 'Pickup Request from ' + form.querySelector('#name').value.trim(),
-                from_name: "Donovan's Heavy Metal Recycling Website",
-                name: form.querySelector('#name').value.trim(),
-                phone: form.querySelector('#phone').value.trim(),
-                address: form.querySelector('#address').value.trim(),
-                items: form.querySelector('#items').value.trim()
-            };
+            const formData = new FormData(form);
 
             fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                body: JSON.stringify(payload)
+                body: formData
             })
             .then(res => res.json())
             .then(json => {
@@ -336,11 +331,11 @@
                     form.reset();
                     setTimeout(() => successMsg.classList.add('hidden'), 5000);
                 } else {
-                    alert('Error: ' + (json.message || 'Unknown error. Please call us at 613-783-1949.'));
+                    alert('Error: ' + (json.message || 'Please call us at 613-783-1949.'));
                 }
             })
             .catch(err => {
-                alert('Could not send request: ' + err.message + '. Please call us directly at 613-783-1949.');
+                alert('Could not send request: ' + err.message);
             })
             .finally(() => {
                 btn.innerHTML = originalText;
